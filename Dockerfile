@@ -9,7 +9,7 @@ ENV GROUP htpc
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP}  && \
     apk add --no-cache --virtual .build-deps curl git make g++ && \
-    apk add --no-cache gnutls-dev expat-dev sqlite-dev c-ares-dev ca-certificates && \
+    apk add --no-cache gnutls-dev expat-dev sqlite-dev c-ares-dev ca-certificates tzdata && \
     mkdir -p /tmp/aria2 && curl -sL https://github.com/aria2/aria2/releases/download/release-${ARIA2_VERSION}/aria2-${ARIA2_VERSION}.tar.gz | tar xz -C /tmp/aria2 --strip-components=1 && \
     cd /tmp/aria2 && ./configure && make -j $(getconf _NPROCESSORS_ONLN) && make install && \
     apk del .build-deps && rm -rf /tmp/*
