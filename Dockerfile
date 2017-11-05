@@ -20,7 +20,6 @@ EXPOSE 6800
 
 USER ${USER}
 
-VOLUME /opt/downloads
 VOLUME /opt/
 
 LABEL version=${ARIA2_VERSION}
