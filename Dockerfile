@@ -23,6 +23,6 @@ USER ${USER}
 VOLUME /opt/
 
 LABEL version=${ARIA2_VERSION}
-LABEL url=https://api.github.com/repos/aria2/aria2/
+LABEL url=https://github.com/aria2/aria2/
 
 CMD aria2c --conf-path=/opt/test.conf --enable-rpc=true --rpc-secret=${RPC_TOKEN} --rpc-listen-all=true -d /opt/downloads
