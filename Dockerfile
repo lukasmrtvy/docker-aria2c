@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.7
 
 ENV ARIA2_VERSION 1.32.0
 
